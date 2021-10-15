@@ -52,7 +52,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -99,7 +99,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -149,7 +149,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -229,7 +229,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -283,7 +283,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -338,7 +338,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -385,7 +385,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
@@ -430,7 +430,7 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@master
+        uses: tailscale/github-action@main
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
           version: '1.16.0'
