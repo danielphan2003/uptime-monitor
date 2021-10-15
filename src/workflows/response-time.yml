@@ -24,7 +24,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_PAT }}
-            - name: Set environment from repository
+      - name: Set environment from repository
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale

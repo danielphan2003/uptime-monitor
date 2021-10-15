@@ -48,8 +48,23 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Generate graphs
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "graphs"
         env:
@@ -79,8 +94,23 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update response time
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "response-time"
         env:
@@ -113,21 +143,36 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update template
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "update-template"
         env:
           GH_PAT: \${{ secrets.GH_PAT }}
       - name: Update response time
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "response-time"
         env:
           GH_PAT: \${{ secrets.GH_PAT }}
           SECRETS_CONTEXT: \${{ toJson(secrets) }}
       - name: Update summary in README
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "readme"
         env:
@@ -138,7 +183,7 @@ jobs:
           workflow: Graphs CI
           token: \${{ secrets.GH_PAT }}
       - name: Generate site
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "site"
         env:
@@ -177,8 +222,23 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Generate site
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "site"
         env:
@@ -215,8 +275,23 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update summary in README
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "readme"
         env:
@@ -254,6 +329,21 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update template
         uses: upptime/uptime-monitor@master
         with:
@@ -285,6 +375,21 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update code
         uses: upptime/updates@master
         env:
@@ -314,8 +419,23 @@ jobs:
         with:
           ref: \${{ github.head_ref }}
           token: \${{ secrets.GH_PAT }}
+      - name: Set environment from repository
+        run: |
+          cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+      - uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
+          passphrase: \${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
+          git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Check endpoint status
-        uses: upptime/uptime-monitor@${await exports.getUptimeMonitorVersion()}
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "update"
         env:
