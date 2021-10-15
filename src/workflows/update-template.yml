@@ -28,9 +28,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: ${{ secrets.GIT_SIGNING_KEY }}

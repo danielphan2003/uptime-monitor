@@ -52,9 +52,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -98,9 +99,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -147,9 +149,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -226,9 +229,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -279,9 +283,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -333,9 +338,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -345,7 +351,7 @@ jobs:
           git-committer-name: \${{ env.GIT_COMMITTER_NAME }}
           git-committer-email: \${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update template
-        uses: upptime/uptime-monitor@master
+        uses: danielphan2003/uptime-monitor@master
         with:
           command: "update-template"
         env:
@@ -379,9 +385,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
@@ -423,9 +430,10 @@ jobs:
         run: |
           cat $GITHUB_WORKSPACE/.env >> $GITHUB_ENV
       - name: Tailscale
-        uses: tailscale/github-action@v1
+        uses: tailscale/github-action@master
         with:
           authkey: \${{ secrets.TAILSCALE_AUTHKEY }}
+          version: '1.16.0'
       - uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: \${{ secrets.GIT_SIGNING_KEY }}
