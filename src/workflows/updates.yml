@@ -35,7 +35,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           git-user-signingkey: true
           git-commit-gpgsign: true
-          git-committer-name: ${{ env.GIT_COMMITER_NAME }}
+          git-committer-name: ${{ env.GIT_COMMITTER_NAME }}
           git-committer-email: ${{ env.GIT_COMMITTER_EMAIL }}
       - name: Update code
         uses: upptime/updates@master
